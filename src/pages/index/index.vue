@@ -2,13 +2,17 @@
   <view class="content">
     <image class="logo" src="/static/logo.png"></image>
     <view>
-      <text class="title">{{ title }}{{ '123' }}</text>
-      <text class="title">你好啊！</text>
+      <text>balabla</text>
+      <view class="title">{{ title }}{{ '123' }}</view>
+      <view class="title">你好啊！{{ username }} </view>
+      <view class="title">{{ doubleAge }} 岁</view>
     </view>
   </view>
 </template>
 
 <script>
+// import store from '@/store/index.js';
+
 export default {
   data() {
     return {
@@ -16,6 +20,15 @@ export default {
     };
   },
   onLoad() {},
+  computed: {
+    username() {
+      return this.$store.state.username;
+      // return store.state.username
+    },
+    doubleAge() {
+      return this.$store.getters.doubleAge;
+    },
+  },
   methods: {},
 };
 </script>
