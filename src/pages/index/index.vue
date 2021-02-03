@@ -1,19 +1,25 @@
 <template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
-    <view>
-      <text>balabla</text>
-      <view class="title">{{ title }}{{ '123' }}</view>
-      <view class="title">你好啊！{{ username }} </view>
-      <view class="title">{{ doubleAge }} 岁</view>
+  <view class="jh-content">
+    <image class="jh-logo" src="/static/logo.png"></image>
+    <h1>Vuex ceshi测试</h1>
+    <view class="jh-article">
+      <view class="jh-article__title--bold">{{ title }}{{ '123' }}</view>
+      <view class="jh-article__title">你好啊！{{ username }} </view>
+      <view class="jh-article__title">{{ doubleAge }} 岁</view>
     </view>
+    <h1>富文本组件测试</h1>
+    <jh-editor />
   </view>
 </template>
 
 <script>
 // import store from '@/store/index.js';
+import JhEditor from '../../components/jh-editor/jh-editor.vue';
 
 export default {
+  components: {
+    JhEditor,
+  },
   data() {
     return {
       title: 'Hello',
@@ -33,27 +39,4 @@ export default {
 };
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin: 200rpx auto 50rpx auto;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-</style>
+<style lang="scss" src="./index.scss" scoped></style>

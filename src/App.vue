@@ -12,6 +12,4 @@ export default {
 };
 </script>
 
-<style>
-/*每个页面公共css */
-</style>
+<style lang="scss" src="./global.scss"></style>
