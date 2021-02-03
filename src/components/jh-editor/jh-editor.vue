@@ -201,9 +201,12 @@ export default {
       formats: {},
     };
   },
+  mounted() {
+    // this.onEditorReady();
+  },
   methods: {
     test() {
-      console.log('test');
+      console.log('获取内容');
       this.editorCtx.getContents({
         success: (res) => {
           console.log(res);
@@ -214,15 +217,28 @@ export default {
       this.readOnly = !this.readOnly;
     },
     onEditorReady() {
+      console.log(uni.createSelectorQuery().select('#jh-editor').context());
+      // #ifdef APP-PLUS || H5 || MP-WEIXIN
       uni
         .createSelectorQuery()
         .select('#jh-editor')
         .context((res) => {
           // 此处微信小程序还有bug，取不到res
-          console.log(res);
+          console.log('all', res);
           this.editorCtx = res.context;
         })
         .exec();
+      // #endif
+
+      // #ifdef MP-WEIXIN
+      // wx.createSelectorQuery()
+      //   .select('#jh-editor')
+      //   .context((res) => {
+      //     console.log('weixin', res);
+      //     this.editorCtx = res.context;
+      //   })
+      //   .exec();
+      // #endif
     },
     undo() {
       this.editorCtx.undo();

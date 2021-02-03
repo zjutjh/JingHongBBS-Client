@@ -1,20 +1,20 @@
 <template>
   <view class="jh-content">
     <image class="jh-logo" src="/static/logo.png"></image>
-    <h1>Vuex ceshi测试</h1>
+    <view>Vuex ceshi测试</view>
     <view class="jh-article">
       <view class="jh-article__title--bold">{{ title }}{{ '123' }}</view>
       <view class="jh-article__title">你好啊！{{ username }} </view>
       <view class="jh-article__title">{{ doubleAge }} 岁</view>
     </view>
-    <h1>富文本组件测试</h1>
+    <view>富文本组件测试</view>
     <jh-editor />
   </view>
 </template>
 
 <script>
 // import store from '@/store/index.js';
-import JhEditor from '../../components/jh-editor/jh-editor.vue';
+import JhEditor from '@/components/jh-editor/jh-editor.vue';
 
 export default {
   components: {
