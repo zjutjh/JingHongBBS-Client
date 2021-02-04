@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import exampleStore from './modules/exampleStore'
+import exampleStore from './modules/exampleStore';
 
 Vue.use(Vuex);
 
@@ -9,7 +9,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   //模块store
   modules: {
-    exampleStore,
+    exampleStore: exampleStore,
   },
   //主store
   state: {
@@ -17,13 +17,12 @@ const store = new Vuex.Store({
     age: 18,
   },
   getters: {
-    doubleAge: state => {
+    doubleAge: (state) => {
       return state.age * 2;
-    }
+    },
   },
-  mutations: {
-
-  },
+  mutations: {},
+  actions: {},
 });
 
 export default store;

@@ -1,19 +1,34 @@
 <template>
-  <view class="jh-content"> me </view>
+  <view class="jh-content">
+    me {{ date.year }} / {{ date.month }} / {{ date.date }}
+  </view>
 </template>
 
 <script>
-// import store from '@/store/index.js';
+import { mapActions } from 'vuex';
+import store from '@/store';
 
 export default {
   data() {
     return {
-      title: 'Hello',
+      date: {
+        year: 1,
+        month: 1,
+        date: 1,
+      },
     };
   },
-  onLoad() {},
+  async onLoad() {
+    this.updateDate();
+    // console.log(store)
+    store.dispatch('setDate');
+  },
   computed: {},
-  methods: {},
+  methods: {
+    updateDate() {
+      this.date = store.state.exampleStore.date;
+    },
+  },
 };
 </script>
 

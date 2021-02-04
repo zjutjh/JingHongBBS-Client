@@ -1,6 +1,8 @@
 <template>
   <view class="jh-content">
     <image class="jh-logo" src="/static/logo.png"></image>
+    <view>mp-html测试</view>
+    <mp-html :content="html" />
     <view>Vuex ceshi测试</view>
     <view class="jh-article">
       <view class="jh-article__title--bold">{{ title }}{{ '123' }}</view>
@@ -13,26 +15,28 @@
 </template>
 
 <script>
-// import store from '@/store/index.js';
+import mpHtml from 'mp-html/dist/uni-app/components/mp-html/mp-html'
 import JhEditor from '@/components/jh-editor/jh-editor.vue';
+
+import store from '@/store/index.js';
 
 export default {
   components: {
-    JhEditor,
+    JhEditor, mpHtml
   },
   data() {
     return {
+      html: '<h1>Hello World!</h1>',
       title: 'Hello',
     };
   },
   onLoad() {},
   computed: {
     username() {
-      return this.$store.state.username;
-      // return store.state.username
+      return store.state.username;
     },
     doubleAge() {
-      return this.$store.getters.doubleAge;
+      return store.getters.doubleAge;
     },
   },
   methods: {},
