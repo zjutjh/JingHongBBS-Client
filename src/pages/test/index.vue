@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import {uniBadge} from '@dcloudio/uni-ui'
 import mpHtml from 'mp-html/dist/uni-app/components/mp-html/mp-html';
 import JhEditor from '@/components/jh-editor/jh-editor.vue';
 
@@ -38,7 +37,6 @@ import store from '@/store/index.js';
 
 export default {
   components: {
-    uniBadge,
     JhEditor,
     mpHtml,
   },
