@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
 import store from '@/store';
 
 export default {

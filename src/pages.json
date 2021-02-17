@@ -2,16 +2,34 @@
   "pages": [
     //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
-      "path": "pages/index/index",
-      "style": {
-        "navigationBarTitleText": "精弘论坛2021"
-      }
+      "path": "pages/explore/index"
+      // "style": {
+      //   "navigationBarTitleText": "发现"
+      // }
     },
     {
-      "path": "pages/me/me",
-      "style": {
-        "navigationBarTitleText": "精弘论坛2021"
-      }
+      "path": "pages/sections/index"
+      // "style": {
+      //   "navigationBarTitleText": "板块"
+      // }
+    },
+    {
+      "path": "pages/messages/index"
+      // "style": {
+      //   "navigationBarTitleText": "消息"
+      // }
+    },
+    {
+      "path": "pages/me/index"
+      // "style": {
+      //   "navigationBarTitleText": "我的"
+      // }
+    },
+    {
+      "path": "pages/test/index"
+      // "style": {
+      //   "navigationBarTitleText": "精弘论坛2021"
+      // }
     }
   ],
   "globalStyle": {
@@ -27,17 +45,36 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/explore/index",
         "iconPath": "static/logo.png",
         "selectedIconPath": "static/logo.png",
-        "text": "首页"
+        "text": "发现"
       },
       {
-        "pagePath": "pages/me/me",
+        "pagePath": "pages/sections/index",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "板块"
+      },
+      {
+        "pagePath": "pages/messages/index",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/me/index",
         "iconPath": "static/logo.png",
         "selectedIconPath": "static/logo.png",
         "text": "我的"
       }
     ]
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // uni-ui 规则如下配置
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
   }
 }
