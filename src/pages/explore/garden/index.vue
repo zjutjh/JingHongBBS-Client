@@ -1,7 +1,6 @@
 <template>
   <view>
-    
-    sections
+    ga
   </view>
 </template>
 

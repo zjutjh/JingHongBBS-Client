@@ -1,5 +1,12 @@
 <template>
   <view class="jh-content">
+    <uni-nav-bar
+      left-icon="back"
+      left-text="返回"
+      right-icon="search"
+      title="导航栏组件"
+      fixed
+    ></uni-nav-bar>
     <image class="jh-logo" src="/static/logo.png"></image>
     <uni-badge text="2" type="primary"></uni-badge>
     <uni-swiper-dot
@@ -10,9 +17,7 @@
     >
       <swiper class="swiper-box" @change="change">
         <swiper-item v-for="(item, index) in info" :key="index">
-          <view class="swiper-item">
-            {{ item.content }}
-          </view>
+          <view class="swiper-item"> 轮播图：{{ item.content }} </view>
         </swiper-item>
       </swiper>
     </uni-swiper-dot>
@@ -68,7 +73,11 @@ export default {
       return store.getters.doubleAge;
     },
   },
-  methods: {},
+  methods: {
+    change(e) {
+      this.current = e.detail.current;
+    },
+  },
 };
 </script>
 

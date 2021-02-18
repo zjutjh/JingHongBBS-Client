@@ -1,7 +1,6 @@
 <template>
   <view>
-    
-    sections
+    sq
   </view>
 </template>
 
