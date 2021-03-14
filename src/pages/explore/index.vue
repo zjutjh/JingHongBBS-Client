@@ -1,12 +1,20 @@
 <template>
-  <view>
-    <!-- 一个menu组件，划三个页面 -->
-    <view @click="toSquare()">广场</view>
-    <view @click="toCollege()">学院</view>
-    <view @click="toGarden()">后院</view>
-    <Square v-if="this.page==1"></Square>
-    <College v-if="this.page==2"></College>
-    <Garden v-if="this.page==3"></Garden>
+  <view class="jh-view">
+    <!-- 一个nav-menu组件，划三个页面 -->
+    <view>
+      <text @click="toSquare()">广场</text>
+      <text @click="toCollege()">学院</text>
+      <text @click="toGarden()">后院</text>
+    </view>
+    <swiper style="height: 100%" :current="currentPage" @change="swiperTab">
+      <swiper-item v-for="item in [0,1,2]" :key="index">
+        <view style="background: #EFEFF4;">
+          <Square v-if="item == 0"></Square>
+          <College v-if="item == 1"></College>
+          <Garden v-if="item == 2"></Garden>
+        </view>
+      </swiper-item>
+    </swiper>
   </view>
 </template>
 
@@ -18,22 +26,26 @@ import Garden from './garden/index';
 
 export default {
   components: {
-    Square, College, Garden
+    Square,
+    College,
+    Garden,
   },
   data() {
     return {
-      page: 1,
+      currentPage: 0,
     };
   },
   async onLoad() {},
   computed: {},
   methods: {
     toSquare() {
-      this.page=1;
-    },toCollege() {
-      this.page=2;
-    },toGarden() {
-      this.page=3;
+      this.currentPage = 0;
+    },
+    toCollege() {
+      this.currentPage = 1;
+    },
+    toGarden() {
+      this.currentPage = 2;
     },
   },
 };

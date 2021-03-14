@@ -52,12 +52,13 @@
         "iconPath": "static/logo.png",
         "selectedIconPath": "static/logo.png",
         "text": "我的"
-      },{
-        "pagePath": "pages/test/index",
-        "iconPath": "static/logo.png",
-        "selectedIconPath": "static/logo.png",
-        "text": "测试"
       }
+      // {
+      //   "pagePath": "pages/test/index",
+      //   "iconPath": "static/logo.png",
+      //   "selectedIconPath": "static/logo.png",
+      //   "text": "测试"
+      // }
     ]
   },
   "easycom": {
