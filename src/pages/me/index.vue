@@ -1,5 +1,5 @@
 <template>
-  <view class="jh-content">
+  <view class="jh-view">
     me {{ date.year }} / {{ date.month }} / {{ date.date }}
   </view>
 </template>

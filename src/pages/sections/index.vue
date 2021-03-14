@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="jh-view">
     
     sections
   </view>
