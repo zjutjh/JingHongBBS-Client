@@ -6,7 +6,11 @@ uni-page-body {
 .jh-view{
   height: 100%;
 }
-
+.jh-avatar--large {
+  width: 89rpx;
+  height: 89rpx;
+  border-radius: 50%;
+}
 .jh-content {
   // display: flex;
   // flex-direction: column;

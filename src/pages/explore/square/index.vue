@@ -17,7 +17,7 @@
     <view>
       <text>排序方式</text>
     </view>
-    <view>
+    <view @click="toDetail(1)">
       <PostItem></PostItem>
     </view>
   </view>
@@ -61,6 +61,19 @@ export default {
     adChange(e) {
       this.ads.current = e.detail.current;
     },
+    toDetail(id) {
+      // console.log("go detial");
+      //1: 获取点击的帖子id，通过路由传过去
+      let params = {
+        url: `/pages/post/index?id=${id}`,
+        // success:  (res) => {
+        //   console.log("go detial ok")
+        // },
+      }
+      // params = {url: `/pages/messages/index`}
+      //跳转
+      uni.navigateTo(params);
+    }
   },
 };
 </script>
