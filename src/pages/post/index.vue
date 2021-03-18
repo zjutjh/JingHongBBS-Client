@@ -7,7 +7,7 @@
           <view class="jh-body__head__name">Congb19</view>
         </view>
         <view class="jh-body__title">
-          title  title  title 
+          食堂新开的水果捞好好吃！
         </view>
         <view class="jh-body__content">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora soluta, placeat ut sint voluptate corporis consequatur reiciendis aperiam rerum, pariatur nisi? Quia nihil maxime atque! Laudantium excepturi tenetur quisquam ratione?

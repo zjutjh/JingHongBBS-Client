@@ -17,7 +17,8 @@
       "path": "pages/test/index"
     },
     {
-      "path": "pages/post/index"
+      "path": "pages/post/index",
+      "navigationBarTitleText": "帖子详情"
     }
   ],
   "globalStyle": {
