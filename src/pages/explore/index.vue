@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import card from '@/components/post-item-card/post-item-card'
 import store from '@/store';
 import Square from './square/index';
 import College from './college/index';
@@ -29,6 +30,7 @@ export default {
     Square,
     College,
     Garden,
+    card
   },
   data() {
     return {

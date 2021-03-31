@@ -20,16 +20,22 @@
     <view>
       <PostItem></PostItem>
     </view>
+    <view>
+      <card></card>
+    </view>
   </view>
 </template>
 
 <script>
+import card from '@/components/post-item-card/post-item-card'
+
 import store from '@/store';
 import PostItem from '@/components/post-item';
 
 export default {
   components: {
     PostItem,
+    card
   },
   data() {
     return {
