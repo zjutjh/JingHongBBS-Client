@@ -20,18 +20,34 @@
       </view>
     </view>
     <view class="jh-card__comments">
-      <view class="jh-card__comment" v-for="(list, index) in item.comment" :key="index">
+      <view
+        class="jh-card__comment"
+        v-for="(list, index) in item.comment"
+        :key="index"
+      >
         <text class="jh-card__comment_user">{{ list.user }}：</text>
         <text class="jh-card__comment_user_say">{{ list.user_say }}</text>
       </view>
     </view>
     <view class="jh-card__function1">
       <view class="jh-card__function1--left">
-        <image class="jh-card__zhuanfa" :src="item.pic" mode="aspectFill"></image>
-        <image class="jh-card__liuyan" :src="item.pic" mode="aspectFill"></image>
+        <image
+          class="jh-card__zhuanfa"
+          :src="item.pic"
+          mode="aspectFill"
+        ></image>
+        <image
+          class="jh-card__liuyan"
+          :src="item.pic"
+          mode="aspectFill"
+        ></image>
       </view>
       <view class="jh-card__function1--right">
-        <image class="jh-card__dianzan" :src="item.pic" mode="aspectFill"></image>
+        <image
+          class="jh-card__dianzan"
+          :src="item.pic"
+          mode="aspectFill"
+        ></image>
       </view>
     </view>
   </view>
@@ -49,7 +65,7 @@ export default {
         tag: 'testTag',
         title_text: '中文',
         article_ctx:
-          '??????????????????????????????????????????????????????????????????????????????????',
+          'laruma asd vhekiav bafevsdfgibevyekfv rkeivbewk bkeruv bewuvb s s s s s s s erwiu a a a  bkvevb uerivbekvbw vbekeruv bewuvb s s s s s s s erwiu a a a  bkvevb uerivbekvbw vberwkvkeruv bewuvb s s s s s s s erwiu a a a  bkvevb uerivbekvbw vberwkvkeruv bewuvb s s s s s s s erwiu a a a  bkvevb uerivbekvbw vberwkvrwkv byervb',
         comment: [
           {
             user: 'userA',
