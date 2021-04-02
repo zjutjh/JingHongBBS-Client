@@ -1,7 +1,5 @@
 <template>
-  <view class="jh-view">
-    messages
-  </view>
+  <view class="jh-view"> messages </view>
 </template>
 
 <script>
@@ -9,14 +7,11 @@ import store from '@/store';
 
 export default {
   data() {
-    return {
-    };
+    return {};
   },
-  async onLoad() {
-  },
+  async onLoad() {},
   computed: {},
-  methods: {
-  },
+  methods: {},
 };
 </script>
 
