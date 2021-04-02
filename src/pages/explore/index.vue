@@ -7,7 +7,7 @@
       <text @click="toGarden()">后院</text>
     </view>
     <swiper style="height: 100%" :current="currentPage" @change="swiperTab">
-      <swiper-item v-for="item in [0, 1, 2]" :key="index">
+      <swiper-item v-for="(item,index) in [0, 1, 2]" :key="index">
         <view style="background: #efeff4">
           <Square v-if="item == 0"></Square>
           <College v-if="item == 1"></College>
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import card from '@/components/post-item-card/post-item-card';
+
 import store from '@/store';
 import Square from './square/index';
 import College from './college/index';
@@ -30,7 +30,7 @@ export default {
     Square,
     College,
     Garden,
-    card,
+
   },
   data() {
     return {

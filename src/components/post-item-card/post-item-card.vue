@@ -1,37 +1,37 @@
 <template>
-  <view class="card">
-    <view class="header">
-      <view class="img">
+  <view class="jh-card">
+    <view class="jh-card__header">
+      <view class="jh-avatar__small">
         <image :src="item.pic" mode="aspectFill"></image>
       </view>
-      <view class="state">
-        <text class="state_name">{{ item.name }}</text>
-        <text class="state_time">{{ item.time }}</text>
+      <view class="jh-card__state">
+        <text class="jh-card__state__name">{{ item.name }}</text>
+        <text class="jh-card__state__time">{{ item.time }}</text>
       </view>
     </view>
 
-    <view class="context">
-      <view class="title">
-        <text class="tag">#{{ item.tag }}</text>
-        <text class="title_text">{{ item.title_text }}</text>
+    <view class="jh-card__context">
+      <view class="jh-card__title">
+        <text class="jh-card__title__tag">#{{ item.tag }}</text>
+        <text class="jh-card__title__text">{{ item.title_text }}</text>
       </view>
-      <view class="article">
-        <text class="article_ctx">{{ item.article_ctx }}</text>
-      </view>
-    </view>
-    <view class="comments">
-      <view class="comment" v-for="(list, index) in item.comment" :key="index">
-        <text class="comment_user">{{ list.user }}：</text>
-        <text class="comment_user_say">{{ list.user_say }}</text>
+      <view class="jh-card__article">
+        <text class="jh-card__article_ctx">{{ item.article_ctx }}</text>
       </view>
     </view>
-    <view class="function1">
-      <view class="function1_left">
-        <image class="zhuanfa" :src="item.pic" mode="aspectFill"></image>
-        <image class="liuyan" :src="item.pic" mode="aspectFill"></image>
+    <view class="jh-card__comments">
+      <view class="jh-card__comment" v-for="(list, index) in item.comment" :key="index">
+        <text class="jh-card__comment_user">{{ list.user }}：</text>
+        <text class="jh-card__comment_user_say">{{ list.user_say }}</text>
       </view>
-      <view class="function1_right">
-        <image class="dianzan" :src="item.pic" mode="aspectFill"></image>
+    </view>
+    <view class="jh-card__function1">
+      <view class="jh-card__function1--left">
+        <image class="jh-card__zhuanfa" :src="item.pic" mode="aspectFill"></image>
+        <image class="jh-card__liuyan" :src="item.pic" mode="aspectFill"></image>
+      </view>
+      <view class="jh-card__function1--right">
+        <image class="jh-card__dianzan" :src="item.pic" mode="aspectFill"></image>
       </view>
     </view>
   </view>
@@ -47,7 +47,7 @@ export default {
         name: 'testName',
         time: '2 days ago',
         tag: 'testTag',
-        title_text: 'testTitle',
+        title_text: '中文',
         article_ctx:
           '??????????????????????????????????????????????????????????????????????????????????',
         comment: [
@@ -67,73 +67,62 @@ export default {
 </script>
 
 <style lang="scss">
-.card {
+.jh-card {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 8rpx;
+  margin-bottom: 8rpx;
   background-color: #ffffff;
   box-sizing: border-box;
-  padding: 32px 29px 12px 29px;
-  .header {
+  padding: 32rpx 29rpx 12rpx 29rpx;
+  .jh-card__header {
     display: flex;
     width: 100%;
     flex-direction: row;
-    padding-bottom: 5px;
-    .img {
-      width: 55px;
-      height: 55px;
-      flex-shrink: 0;
-      margin-right: 10px;
-      border-radius: 27.5px;
-      overflow: hidden;
-      image {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .state {
+    padding-bottom: 5rpx;
+
+    .jh-card__state {
       display: flex;
       flex-direction: column;
 
-      .state_name {
-        font-size: 24px;
+      .jh-card__state__name {
+        font-size: 24rpx;
       }
-      .state_time {
+      .jh-card__state__time {
         color: #a9a9a9;
-        font-size: 18px;
+        font-size: 18rpx;
       }
     }
   }
   //上下间距设在border-bottom上
-  .context {
+  .jh-card__context {
     display: flex;
 
     flex-direction: column;
-    margin: 0 0 8px 21px;
+    margin: 0 0 8rpx 21rpx;
     overflow: hidden;
-    .title {
+    .jh-card__title {
       display: felx;
       flex-direction: column;
       vertical-align: center;
-      .tag {
+      .jh-card__title__tag {
         background-color: #da8eae;
-        border-radius: 10px;
-        padding: 1px 7px;
-        margin-right: 10px;
+        border-radius: 10rpx;
+        padding: 1rpx 7rpx;
+        margin-right: 10rpx;
         color: #ffffff;
-        font-size: 18px;
+        font-size: 18rpx;
       }
-      .title_text {
-        font-size: 28px;
+      .jh-card__title__text {
+        font-size: 28rpx;
       }
     }
-    .article {
+    .jh-card__article {
       position: relative;
       text {
         color: #a9a9a9;
-        font-size: 24px;
+        font-size: 24rpx;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -142,31 +131,31 @@ export default {
       }
     }
   }
-  .comments {
+  .jh-card__comments {
     display: flex;
     flex-direction: column;
-    margin: 0px 55px 25px 26px;
-    .comment {
+    margin: 0rpx 55rpx 25rpx 26rpx;
+    .jh-card__comment {
       color: #81b2e9;
-      font-size: 18px;
+      font-size: 18rpx;
       display: flex;
       flex-direction: row;
     }
   }
-  .function1 {
+  .jh-card__function1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 0px 35.5px 18px 39px;
+    border: 0rpx 35.5rpx 18rpx 39rpx;
     // .function1_left{
 
     image {
       width: 100%;
       height: 100%;
-      width: 31px;
-      height: 31px;
+      width: 31rpx;
+      height: 31rpx;
       flex-shrink: 0;
-      margin-right: 10px;
+      margin-right: 10rpx;
       overflow: hidden;
     }
 
