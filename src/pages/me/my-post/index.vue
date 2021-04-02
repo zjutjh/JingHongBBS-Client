@@ -1,5 +1,5 @@
 <template>
-  <view class="jh-view"> messages </view>
+  <view> my-post </view>
 </template>
 
 <script>
@@ -9,12 +9,13 @@ export default {
   data() {
     return {};
   },
-  async onLoad() {
+  async onShow() {
     // uni.hideTabBar();
+    // uni.showTabBar();
   },
   computed: {},
   methods: {},
 };
 </script>
 
-<style lang="scss" src="./index.scss" scoped></style>
+<style lang="scss" scoped></style>

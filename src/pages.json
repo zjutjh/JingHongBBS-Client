@@ -1,6 +1,7 @@
 {
   "pages": [
     //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    //四大板块
     {
       "path": "pages/explore/index"
     },
@@ -13,9 +14,22 @@
     {
       "path": "pages/me/index"
     },
+    //测试用页
     {
       "path": "pages/test/index"
     },
+    //发现
+
+    //板块
+
+    //消息
+
+    //我的
+    {
+      "path": "pages/me/my-post/index"
+    },
+
+    //其他
     {
       "path": "pages/post/index",
       "navigationBarTitleText": "帖子详情"
@@ -57,6 +71,12 @@
         "selectedIconPath": "static/logo.png",
         "text": "我的"
       }
+      // {
+      //   "pagePath": "pages/me/my-post/index",
+      //   // "iconPath": "static/logo.png",
+      //   // "selectedIconPath": "static/logo.png",
+      //   "text": "我的"
+      // }
       // {
       //   "pagePath": "pages/test/index",
       //   "iconPath": "static/logo.png",
