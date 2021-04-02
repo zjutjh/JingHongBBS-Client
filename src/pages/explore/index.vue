@@ -7,8 +7,8 @@
       <text @click="toGarden()">后院</text>
     </view>
     <swiper style="height: 100%" :current="currentPage" @change="swiperTab">
-      <swiper-item v-for="item in [0,1,2]" :key="index">
-        <view style="background: #EFEFF4;">
+      <swiper-item v-for="(item,index) in [0, 1, 2]" :key="index">
+        <view style="background: #efeff4">
           <Square v-if="item == 0"></Square>
           <College v-if="item == 1"></College>
           <Garden v-if="item == 2"></Garden>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+
 import store from '@/store';
 import Square from './square/index';
 import College from './college/index';
@@ -29,6 +30,7 @@ export default {
     Square,
     College,
     Garden,
+
   },
   data() {
     return {

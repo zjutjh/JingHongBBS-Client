@@ -1,7 +1,5 @@
 <template>
-  <view>
-    ga
-  </view>
+  <view> ga </view>
 </template>
 
 <script>
@@ -9,14 +7,11 @@ import store from '@/store';
 
 export default {
   data() {
-    return {
-    };
+    return {};
   },
-  async onLoad() {
-  },
+  async onLoad() {},
   computed: {},
-  methods: {
-  },
+  methods: {},
 };
 </script>
 

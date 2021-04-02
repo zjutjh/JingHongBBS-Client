@@ -1,8 +1,5 @@
 <template>
-  <view class="jh-view">
-    
-    sections
-  </view>
+  <view class="jh-view"> sections </view>
 </template>
 
 <script>
@@ -10,14 +7,11 @@ import store from '@/store';
 
 export default {
   data() {
-    return {
-    };
+    return {};
   },
-  async onLoad() {
-  },
+  async onLoad() {},
   computed: {},
-  methods: {
-  },
+  methods: {},
 };
 </script>
 

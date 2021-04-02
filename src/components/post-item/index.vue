@@ -12,17 +12,13 @@
 import store from '@/store';
 
 export default {
-  props: {
-
-  },
+  props: {},
   data() {
-    return {
-    };
+    return {};
   },
   async onLoad() {},
   computed: {},
-  methods: {
-  },
+  methods: {},
 };
 </script>
 

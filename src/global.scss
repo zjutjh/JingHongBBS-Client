@@ -1,9 +1,9 @@
 /*每个页面公共css */
 uni-page-body {
   height: 100%;
-  background-color: #EFEFF4;
+  background-color: #efeff4;
 }
-.jh-view{
+.jh-view {
   height: 100%;
 }
 
@@ -12,4 +12,16 @@ uni-page-body {
   // flex-direction: column;
   // align-items: center;
   // justify-content: center;
+}
+.jh-avatar__small {
+  width: 55rpx;
+  height: 55rpx;
+  flex-shrink: 0;
+  margin-right: 10rpx;
+  border-radius: 27.5rpx;
+  overflow: hidden;
+  image {
+    width: 100%;
+    height: 100%;
+  }
 }
