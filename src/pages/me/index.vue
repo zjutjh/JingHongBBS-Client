@@ -1,11 +1,12 @@
 <template>
   <view class="jh-view">
-    me {{ date.year }} / {{ date.month }} / {{ date.date }}
+    me {{ date.year }} / {{ date.month }} / {{ date.date }} / {{ test }}
   </view>
 </template>
 
 <script>
 import store from '@/store';
+import * as api from '@/api/index';
 
 export default {
   data() {
@@ -15,18 +16,23 @@ export default {
         month: 1,
         date: 1,
       },
+      test: '',
     };
   },
   async onLoad() {
-    this.updateDate();
+    // this.updateDate();
     // console.log(store)
-    store.dispatch('setDate');
+    // store.dispatch('setDate');
+
+    const res = await api.graphTest();
+    this.test = res;
+    console.log(res);
   },
   computed: {},
   methods: {
-    updateDate() {
-      this.date = store.state.exampleStore.date;
-    },
+    // updateDate() {
+    //   this.date = store.state.exampleStore.date;
+    // },
   },
 };
 </script>

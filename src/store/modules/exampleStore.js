@@ -13,16 +13,16 @@ const exampleStore = {
   },
   getters: {},
   mutations: {
-    changeDate(state, date) {
-      state.date = date;
-    },
+    // changeDate(state, date) {
+    //   state.date = date;
+    // },
   },
   actions: {
-    async setDate({ state, commit, rootState }, payload) {
-      let res = await api.getDate();
-      console.log('got!', res);
-      commit('changeDate', res.data);
-    },
+    // async setDate({ state, commit, rootState }, payload) {
+    //   let res = await api.getDate();
+    //   console.log('got!', res);
+    //   commit('changeDate', res.data);
+    // },
   },
 };
 
