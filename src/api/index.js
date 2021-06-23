@@ -11,12 +11,16 @@ import { req } from './request.js';
 //   return res;
 // };
 
-export const graphTest = async () => {
+export const querys = {
+  test: "query MyQuery {jh_bbs_comments {id}}"
+}
+
+export const graphql = async (query) => {
   let res = await req({
     url: `/api`,
     method: `POST`,
     data: {
-      query: "query MyQuery {jh_bbs_comments {id}}",
+      query
     }
   });
   return res;

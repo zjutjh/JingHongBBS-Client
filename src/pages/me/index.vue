@@ -24,7 +24,8 @@ export default {
     // console.log(store)
     // store.dispatch('setDate');
 
-    const res = await api.graphTest();
+    const res = await api.graphql(api.querys.test);
+
     this.test = res;
     console.log(res);
   },
