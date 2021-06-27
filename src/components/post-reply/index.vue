@@ -1,20 +1,24 @@
 <template>
-  <view class="jh-view"> messages </view>
+  <view class="jh-post-reply">
+    reply
+  </view>
 </template>
 
 <script>
 import store from '@/store';
 
 export default {
-  data() {
-    return {};
+  props: {
+
   },
-  async onLoad() {
-    // uni.hideTabBar();
+  data() {
+    return {
+    };
   },
   async onLoad() {},
   computed: {},
-  methods: {},
+  methods: {
+  },
 };
 </script>
 
