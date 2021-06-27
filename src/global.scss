@@ -6,6 +6,10 @@ uni-page-body {
 .jh-view {
   height: 100%;
 }
+.jh-view__square {
+  height: 96%;
+  overflow-y: auto;
+}
 .jh-avatar--large {
   width: 89rpx;
   height: 89rpx;

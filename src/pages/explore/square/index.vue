@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="jh-view__square">
     <uni-swiper-dot
       :info="ads.list"
       :current="ads.current"
@@ -7,10 +7,10 @@
       :mode="ads.mode"
     >
       <swiper class="swiper-box" @change="adChange">
-        <swiper-item v-for="(item, index) in ads.list" :key="index">
+        <swiper-item v-for="(item, index) in ads.list" :item-id="index">
           <view class="swiper-item">
             <image
-              style="width: 100%"
+              style="width: 100%; height: 375rpx"
               :mode="item.mode"
               :src="item.url"
               @error="imageError"
@@ -26,6 +26,15 @@
       <PostItem></PostItem>
     </view> -->
     <view @click="toDetail(1)">
+      <PostItemCard></PostItemCard>
+    </view>
+    <view @click="toDetail(2)">
+      <PostItemCard></PostItemCard>
+    </view>
+    <view @click="toDetail(3)">
+      <PostItemCard></PostItemCard>
+    </view>
+    <view @click="toDetail(4)">
       <PostItemCard></PostItemCard>
     </view>
   </view>

@@ -11,7 +11,8 @@
     display: flex;
     width: 100%;
     flex-direction: row;
-    padding-bottom: 5rpx;
+    margin-bottom: 13rpx;
+    // padding-bottom: 5rpx;
 
     .jh-card__state {
       display: flex;
@@ -19,34 +20,34 @@
 
       .jh-card__state__name {
         font-size: 24rpx;
+        line-height: 33rpx;
       }
       .jh-card__state__time {
         color: #a9a9a9;
         font-size: 18rpx;
+        line-height: 25rpx;
       }
     }
   }
   //上下间距设在border-bottom上
   .jh-card__context {
     display: flex;
-
     flex-direction: column;
     margin: 0 0 8rpx 21rpx;
     overflow: hidden;
     .jh-card__title {
-      display: felx;
-      flex-direction: column;
-      vertical-align: center;
       .jh-card__title__tag {
         background-color: #da8eae;
         border-radius: 10rpx;
-        padding: 1rpx 7rpx;
+        padding: 1rpx 10rpx;
         margin-right: 10rpx;
         color: #ffffff;
         font-size: 18rpx;
+        line-height: 40rpx;
       }
       .jh-card__title__text {
         font-size: 28rpx;
+        line-height: 40rpx;
       }
     }
     .jh-card__article {
@@ -54,10 +55,11 @@
       text {
         color: #a9a9a9;
         font-size: 24rpx;
+        line-height: 33rpx;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
       }
     }
