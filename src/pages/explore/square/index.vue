@@ -22,25 +22,22 @@
     <view>
       <text>排序方式</text>
     </view>
-    <view @click="toDetail(1)">
+    <!-- <view>
       <PostItem></PostItem>
-    </view>
-    <view>
-      <card></card>
+    </view> -->
+    <view @click="toDetail(1)">
+      <PostItemCard></PostItemCard>
     </view>
   </view>
 </template>
 
 <script>
-import card from '@/components/post-item-card/post-item-card';
-
 import store from '@/store';
-import PostItem from '@/components/post-item';
+import PostItemCard from '@/components/post-item-card/post-item-card';
 
 export default {
   components: {
-    PostItem,
-    card,
+    PostItemCard,
   },
   data() {
     return {
@@ -82,11 +79,11 @@ export default {
         // success:  (res) => {
         //   console.log("go detial ok")
         // },
-      }
+      };
       // params = {url: `/pages/messages/index`}
       //跳转
       uni.navigateTo(params);
-    }
+    },
   },
 };
 </script>

@@ -18,10 +18,10 @@
       </view>
       <view class="jh-post__replies">
         <view class="jh-replies__reply">
-          <PostReply></PostReply>
+          <PostReplyCard></PostReplyCard>
         </view>
         <view class="jh-replies__reply">
-          <PostReply></PostReply>
+          <PostReplyCard></PostReplyCard>
         </view>
       </view>
     </view>
@@ -30,11 +30,11 @@
 
 <script>
 import store from '@/store';
-import PostReply from '@/components/post-reply';
+import PostReplyCard from '@/components/post-reply-card/post-reply-card';
 
 export default {
   components: {
-    PostReply
+    PostReplyCard
   },
   data() {
     return {

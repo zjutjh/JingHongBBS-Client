@@ -1,0 +1,108 @@
+.jh-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 8rpx;
+  margin-bottom: 8rpx;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 32rpx 29rpx 12rpx 29rpx;
+  .jh-card__header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding-bottom: 5rpx;
+
+    .jh-card__state {
+      display: flex;
+      flex-direction: column;
+
+      .jh-card__state__name {
+        font-size: 24rpx;
+      }
+      .jh-card__state__time {
+        color: #a9a9a9;
+        font-size: 18rpx;
+      }
+    }
+  }
+  //上下间距设在border-bottom上
+  .jh-card__context {
+    display: flex;
+
+    flex-direction: column;
+    margin: 0 0 8rpx 21rpx;
+    overflow: hidden;
+    .jh-card__title {
+      display: felx;
+      flex-direction: column;
+      vertical-align: center;
+      .jh-card__title__tag {
+        background-color: #da8eae;
+        border-radius: 10rpx;
+        padding: 1rpx 7rpx;
+        margin-right: 10rpx;
+        color: #ffffff;
+        font-size: 18rpx;
+      }
+      .jh-card__title__text {
+        font-size: 28rpx;
+      }
+    }
+    .jh-card__article {
+      position: relative;
+      text {
+        color: #a9a9a9;
+        font-size: 24rpx;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+  .jh-card__comments {
+    display: flex;
+    flex-direction: column;
+    margin: 0rpx 55rpx 25rpx 26rpx;
+    .jh-card__comment {
+      color: #81b2e9;
+      font-size: 18rpx;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .jh-card__function1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 0rpx 35.5rpx 18rpx 39rpx;
+    // .function1_left{
+
+    image {
+      width: 100%;
+      height: 100%;
+      width: 31rpx;
+      height: 31rpx;
+      flex-shrink: 0;
+      margin-right: 10rpx;
+      overflow: hidden;
+    }
+
+    // }
+    // .function1_right{
+
+    //     image{
+    //         width: 100%;
+    //         height: 100%;
+    //         width: 55px;
+    //         height: 55px;
+    //         flex-shrink: 0;
+    //         margin-right:10px ;
+    //         overflow: hidden;
+    //     }
+
+    // }
+  }
+}
