@@ -4,7 +4,7 @@ module.exports = {
     port: '8088',
     proxy: {
       '/api': {
-        target: 'http://146.56.224.139:4000/v1/graphql',
+        target: 'http://146.56.224.139:3000/v1/graphql',
         ws: true,
         changeOrigin: true,
         pathRewrite: {

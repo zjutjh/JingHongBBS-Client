@@ -29,7 +29,7 @@
         <text class="jh-card__comment_user_say">{{ list.user_say }}</text>
       </view>
     </view>
-    <view class="jh-card__function1">
+    <!-- <view class="jh-card__function1">
       <view class="jh-card__function1--left">
         <image
           class="jh-card__zhuanfa"
@@ -49,7 +49,7 @@
           mode="aspectFill"
         ></image>
       </view>
-    </view>
+    </view> -->
   </view>
 </template>
 

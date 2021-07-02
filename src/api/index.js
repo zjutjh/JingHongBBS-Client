@@ -2,7 +2,7 @@
 
 import { req } from './request.js';
 
-// 示例请求
+// 普通请求
 // export const getDate = async () => {
 //   let res = await req({
 //     url: `/api/public/getDate`,
@@ -11,8 +11,11 @@ import { req } from './request.js';
 //   return res;
 // };
 
+
+// graghql请求
 export const querys = {
-  test: "query MyQuery {jh_bbs_comments {id}}"
+  test: "query MyQuery {jh_bbs_comments {id}}",
+  test2: "..."
 }
 
 export const graphql = async (query) => {
